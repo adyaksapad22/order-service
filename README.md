@@ -13,7 +13,7 @@ Microservice untuk mengelola pemesanan (order) pada sistem kantin kampus ITB. La
 
 ### 🚀 Fitur Utama
 
-* **Create Order (Pemesanan Baru):** Menerima pesanan dan membuat ID transaksi unik.
+* **Create Order:** Menerima pesanan dan membuat ID transaksi unik.
 * **Real-time Stock Validation:** Mengecek ketersediaan stok ke Inventory Service sebelum order diproses.
 * **Automatic Stock Reduction:** Mengurangi stok di Inventory Service secara otomatis saat order berhasil.
 * **Get All Orders:** Melihat riwayat seluruh pesanan yang masuk.
@@ -74,9 +74,13 @@ Berikut adalah daftar endpoint yang tersedia untuk Order Service:
 (Buat order baru, validasi & kurangi stok via call ke Inventory Service)
 
 ```bash
-curl -X POST [http://pad.theokaitou.my.id/orders](http://pad.theokaitou.my.id/orders) \
+curl -X POST http://pad.theokaitou.my.id/orders \
   -H "Content-Type: application/json" \
-  -d '{"productId": "P001", "quantity": 1, "customerName": "Padmanabha "}'
+  -d '{
+        "productId": "P001",
+        "quantity": 1,
+        "customerName": "Padmanabha "
+    }'
 
 ```
 
