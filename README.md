@@ -101,3 +101,11 @@ curl http://pad.theokaitou.my.id/orders
 curl http://pad.theokaitou.my.id/orders/1
 
 ```
+
+### Environment Variables
+
+| Variable | Default | Description |
+| :--- | :--- | :--- |
+| `PORT` | `3001` | Server port (Internal Container) |
+| `INVENTORY_SERVICE_URL` | `http://inventory-service:9697/api` | URL Inventory Service untuk validasi stok |
+| `NODE_ENV` | `production` | Environment mode |
